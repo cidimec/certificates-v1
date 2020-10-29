@@ -35,8 +35,8 @@ def main(argv):
                 writer = PdfFileWriter()
                 writer.addPage(reader.getPage(i))
                 writer.addPage(reader.getPage(i+1))
-                with open('./output/'+str(data[int(i/2) + 1][field])+'.pdf', 'wb') as outfile:
-                    print('./output/'+str(data[int(i/2) + 1][field])+'.pdf')
+                with open('./output/'+str(data[int(i/2) + 1][int(field)])+'.pdf', 'wb') as outfile:
+                    print('./output/'+str(data[int(i/2) + 1][int(field)])+'.pdf')
                     writer.write(outfile)
 
     else:
